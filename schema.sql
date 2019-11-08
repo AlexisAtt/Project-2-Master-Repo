@@ -1,3 +1,4 @@
+DROP cliCombat_db;
 CREATE DATABASE cliCombat_db;
 USE cliCombat_db;
 

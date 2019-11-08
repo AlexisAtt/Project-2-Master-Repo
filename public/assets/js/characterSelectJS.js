@@ -1,3 +1,4 @@
+var db = require("../models");
 
 
 $(document).ready(function() {
@@ -9,13 +10,19 @@ $(document).ready(function() {
 
     mageBtnClick.on("click", function(){
         $.get("/api/hero/" + "mage").then(function (response){
+            
             console.log(response);
+            
+            
         })
+
+
     });
 
     knightBtnClick.on("click", function(){
         $.get("/api/hero/" + "knight").then(function (response){
             console.log(response);
+
         })
     });
 
@@ -23,6 +30,8 @@ $(document).ready(function() {
     archerBtnClick.on("click", function(){
         $.get("/api/hero/" + "archer").then(function (response){
             console.log(response);
+
+
         })
     });
 

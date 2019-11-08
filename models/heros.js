@@ -11,9 +11,6 @@ module.exports = function(sequelize, DataTypes) {
       coin: DataTypes.INTEGER,
       alive: DataTypes.BOOLEAN,
       userChoice: DataTypes.BOOLEAN
-   
-
-
     },
     {timestamps: false},
     {allowNull:false}

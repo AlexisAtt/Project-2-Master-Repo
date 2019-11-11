@@ -1,4 +1,4 @@
-DROP cliCombat_db;
+DROP DATABASE cliCombat_db;
 CREATE DATABASE cliCombat_db;
 USE cliCombat_db;
 
@@ -13,8 +13,12 @@ dodge integer (10) NOT NULL,
 level integer (10) NOT NULL,
 block integer (10) NOT NULL,
 coin integer (10) NOT NULL,
+alive BOOLEAN DEFAULT 1,
+userChoice BOOLEAN DEFAULT false,
+characterPic VARCHAR (255) NOT NULL, 
 primary key (id) 
 );
+
 
 CREATE TABLE monsters (
 id int NOT NULL AUTO_INCREMENT,
@@ -25,8 +29,11 @@ critMod integer (10) NOT NULL,
 dodge integer (10) NOT NULL,
 level integer (10) NOT NULL,
 block integer (10) NOT NULL,
+alive BOOLEAN DEFAULT 1,
+enemyChoice BOOLEAN DEFAULT 0,
 primary key (id) 
 );
+
 
 
 /*

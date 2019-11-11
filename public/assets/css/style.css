@@ -1,0 +1,39 @@
+body {
+    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573090338/113769_oqlr0j.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+/* entire jumbotron */
+.jumbotron {
+    text-align: center;
+    padding: 25%, 5%, 25%, 5%;
+    margin-top: 5%;
+    z-index: 1;
+    opacity: 0.95;
+}
+
+
+
+/* jumbotron header */
+.display-4 {
+    color: goldenrod;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+/* jumbotron text */
+.txtdiv {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* buttons */
+.btndiv {
+    z-index: 3;
+    opacity: 1;
+    padding: 0;
+}

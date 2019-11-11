@@ -8,12 +8,13 @@ module.exports = function(app) {
 
   // index route loads homepage
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/index.html"));
   });
 
   // characterSelect route loads Character Select.html
   app.get("/characterSelect", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/characterSelect.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/chooseyourcharacter/choosecharacter.html"));
+    //res.sendFile(path.join(__dirname, "../public/characterSelect.html"));
   });
 
     // enemySelect route loads enemySelect.html
@@ -28,7 +29,7 @@ module.exports = function(app) {
 
     // itemShop route loads itemShop.html
         app.get("/itemShop", function(req, res) {
-            res.sendFile(path.join(__dirname, "../public/itemShop.html"));
+            res.sendFile(path.join(__dirname, "../public/itempage.html"));
         });
 
     // winsPage loads winsPage.html
@@ -40,6 +41,12 @@ module.exports = function(app) {
         app.get("/gameOver", function(req, res) {
             res.sendFile(path.join(__dirname, "../public/gameOver.html"));
         });
+
+
+    // Devpage loads devPage.html
+    app.get("/devPage", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/devpage.html"));
+    });
     
 
 

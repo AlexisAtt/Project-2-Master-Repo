@@ -50,6 +50,14 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/api/herochoice/:userChoice", function (req, res){
+        console.log(req.params.userChoice);
+        db.hero.findOne({ where: {userChoice: req.params.userChoice }}).then(function (result){
+            console.log(result);
+            res.json(result);
+        })
+        
+    });
     
 }
 

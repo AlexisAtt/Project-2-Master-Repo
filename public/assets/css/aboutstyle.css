@@ -1,0 +1,125 @@
+* {
+    text-decoration: none;
+    font-family: "monserrat";
+}
+
+
+body{
+    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573090338/113769_oqlr0j.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-color: black;
+}
+
+.jumbotron {
+height: 120px;
+margin-top: 3%;
+text-align: center;
+height: 100px;
+color: goldenrod;
+opacity: 0.95;
+
+}
+
+#titlehead h1 {
+
+    font-family: adobe-caslon-pro, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    margin-top: 0;
+}
+   
+
+/* container with cards */
+.container {
+    float: left;
+}
+
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.card {
+    cursor: pointer;
+    width: 225px;
+    height: 300px;
+    font-family: adobe-caslon-pro, serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front img {
+    height: 100%
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+    opacity: 0.9;
+}
+
+.back-content {
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    font-size-adjust: inherit;
+}
+
+.sm {
+    margin: 20px 0;
+}
+
+.sm a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 16px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.sm a:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+/* BUTTON STYLING */
+.btndiv {
+    position: absolute;
+    top: 80%;
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    opacity: 0.95;
+}
+

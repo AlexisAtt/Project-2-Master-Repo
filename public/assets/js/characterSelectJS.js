@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    
+
 
     var mageBtnClick = $("#mage-btn");
     var knightBtnClick = $("#knight-btn");
@@ -12,13 +12,31 @@ $(document).ready(function() {
 
     mageBtnClick.on("click", function(){
 
-     //  $("empty-heroSpace").attr("href", "../images/characters/archerPic.png");
+      // $("#empty-heroSpace").attr("src", "../images/characters/archerPic.png");
 
-        $.get("/api/hero/" + "mage").then(function (response){
-            console.log(response);
-            
-            
-        })
+
+
+//ajax call 
+    $.ajax({
+    type: 'PUT',
+    url: '/api/hero/mage',
+    data: {userChoice: 1},
+    success: function () {
+        console.log("Success!")
+        
+    }
+});
+
+$.get("/api/hero/" + "mage").then(function (mageData){
+    console.log(mageData);
+    //update value userchoice true
+    //if user choice value is updated as true carry data over into local
+    //localStorage.setItem('character', character)
+    //make sure to clear local storage
+    //link the user image.
+    //if userChoice = true
+     
+})
 
 
     });
@@ -57,6 +75,8 @@ $(document).ready(function() {
 
         })
     });
+
+
 
 
 

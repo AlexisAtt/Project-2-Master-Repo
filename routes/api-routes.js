@@ -24,6 +24,24 @@ module.exports = function(app) {
         })
         
     });
+
+
+    app.put("/api/hero/:name", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.name)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          name: req.params.name,
+          userChoice: req.body.userChoice
+        }, {
+          where: {
+            name: req.params.name
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
     app.get("/api/monster/:name", function (req, res) {
         console.log(req.params.name);
         db.monster.findOne({ where: {name: req.params.name }}).then(function (monsterData){
@@ -31,6 +49,8 @@ module.exports = function(app) {
             res.json(monsterData);
         });
     });
+
+    
 }
 
 

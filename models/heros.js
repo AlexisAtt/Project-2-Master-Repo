@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var hero = sequelize.define("hero", {
-      // Giving the Author model a name of type STRING
       name: DataTypes.STRING,
       health: DataTypes.INTEGER,
       attack: DataTypes.INTEGER,
@@ -10,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
       block: DataTypes.INTEGER,
       coin: DataTypes.INTEGER,
       alive: DataTypes.BOOLEAN,
-      userChoice: DataTypes.BOOLEAN
+      userChoice: DataTypes.BOOLEAN,
+      characterPic: DataTypes.STRING
     },
     {timestamps: false},
     {allowNull:false}

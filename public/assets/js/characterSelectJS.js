@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-
     
 
     var mageBtnClick = $("#mage-btn");
@@ -14,11 +13,22 @@ $(document).ready(function() {
 
      //  $("empty-heroSpace").attr("href", "../images/characters/archerPic.png");
 
+    
+
         $.get("/api/hero/" + "mage").then(function (response){
             console.log(response);
+
             
             
         })
+        
+        $.ajax({
+            method: "PUT",
+            url: "/api/hero/" + "mage",
+            data: {userChoice: true}
+          }).then(function(){
+            window.location.href = "/enemySelect"
+          });
 
 
     });
@@ -57,7 +67,6 @@ $(document).ready(function() {
 
         })
     });
-
 
 
 

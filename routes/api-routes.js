@@ -16,9 +16,9 @@ module.exports = function(app) {
     });
 
     //call table data by character name
-    app.get("/api/hero/:name", function (req, res){
-        console.log(req.params.name);
-        db.hero.findOne({ where: {name: req.params.name }}).then(function (heroData){
+    app.get("/api/hero/:id", function (req, res){
+        console.log(req.params.id);
+        db.hero.findOne({ where: {id: req.params.id }}).then(function (heroData){
             console.log(heroData);
             res.json(heroData);
         })
@@ -35,17 +35,17 @@ module.exports = function(app) {
     });
 
 
-    app.put("/api/hero/:name", function(req, res) {
+    app.put("/api/hero/:id", function(req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
-        console.log(req.params.name)
+        console.log(req.params.id)
         console.log(req.body.userChoice)
         db.hero.update({
-          name: req.params.name,
+          id: req.params.id,
           userChoice: req.body.userChoice
         }, {
           where: {
-            name: req.params.name
+            id: req.params.id
           }
         }).then(function(data) {
           res.json(data);
@@ -55,10 +55,10 @@ module.exports = function(app) {
       app.put("/api/heroAttacked/:userChoice", function(req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
-        console.log(req.params.name)
+        console.log(req.params.id)
         console.log(req.body.userChoice)
         db.hero.update({
-          name: req.params.name,
+          id: req.params.id,
           health: req.body.health
         }, {
           where: {
@@ -69,10 +69,49 @@ module.exports = function(app) {
         });
       });
 
+      app.put("/api/heroLeveledUp/:userChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          id: req.params.id,
+          health: req.body.health,
+          attack: req.body.attack,
+          block: req.body.block,
+          dodge: req.body.dodge,
+          level: req.body.level,
+          coin: req.body.coin
+        }, {
+          where: {
+            userChoice: req.params.userChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+       });
 
-    app.get("/api/monster/:name", function (req, res) {
-        console.log(req.params.name);
-        db.monster.findOne({ where: {name: req.params.name }}).then(function (monsterData){
+      app.put("/api/heroDied/:userChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          id: req.params.id,
+          alive: req.body.alive
+        }, {
+          where: {
+            userChoice: req.params.userChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
+
+    app.get("/api/monster/:id", function (req, res) {
+        console.log(req.params.id);
+        db.monster.findOne({ where: {id: req.params.id }}).then(function (monsterData){
             console.log(monsterData);
             res.json(monsterData);
         });
@@ -87,17 +126,17 @@ module.exports = function(app) {
         
     });
 
-    app.put("/api/monster/:name", function(req, res) {
+    app.put("/api/monster/:id", function(req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
-        console.log(req.params.name)
+        console.log(req.params.id)
         console.log(req.body.enemyChoice)
         db.monster.update({
-          name: req.params.name,
+          id: req.params.id,
           enemyChoice: req.body.enemyChoice
         }, {
           where: {
-            name: req.params.name
+            id: req.params.id
           }
         }).then(function(data) {
           res.json(data);
@@ -107,11 +146,45 @@ module.exports = function(app) {
       app.put("/api/monsterAttacked/:enemyChoice", function(req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
-        console.log(req.params.name)
+        console.log(req.params.id)
         console.log(req.body.enemyChoice)
         db.monster.update({
-          name: req.params.name,
+          id: req.params.id,
           health: req.body.health
+        }, {
+          where: {
+            enemyChoice: req.params.enemyChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
+      app.put("/api/monsterDied/:enemyChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.enemyChoice)
+        db.monster.update({
+          id: req.params.id,
+          alive: req.body.alive
+        }, {
+          where: {
+            enemyChoice: req.params.enemyChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
+      app.put("/api/monsterUnselect/:enemyChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.enemyChoice)
+        db.monster.update({
+          id: req.params.id,
+          enemyChoice: req.body.enemyChoice
         }, {
           where: {
             enemyChoice: req.params.enemyChoice

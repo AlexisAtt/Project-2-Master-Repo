@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     
 
-        $.get("/api/hero/" + "mage").then(function (response){
+        $.get("/api/hero/" + "4").then(function (response){
             console.log(response);
 
             
@@ -24,7 +24,7 @@ $(document).ready(function() {
         
         $.ajax({
             method: "PUT",
-            url: "/api/hero/" + "mage",
+            url: "/api/hero/" + "4",
             data: {userChoice: true}
           }).then(function(){
             window.location.href = "/enemySelect"
@@ -34,38 +34,56 @@ $(document).ready(function() {
     });
 
     knightBtnClick.on("click", function(){
-        $.get("/api/hero/" + "knight").then(function (response){
+        $.get("/api/hero/" + "2").then(function (response){
             console.log(response);
 
-      //      $("#empty-heroSpace").replaceWith($("#knightImage"));
-           // $("#mageImage").hide();
-           // $("#archerImage").hide();
-           // $("#rogueImage").hide();
-           // $("#knightImage").show();
-
         })
+
+        $.ajax({
+            method: "PUT",
+            url: "/api/hero/" + "2",
+            data: {userChoice: true}
+          }).then(function(){
+            window.location.href = "/enemySelect"
+          });
     });
 
 
     archerBtnClick.on("click", function(){
-        $.get("/api/hero/" + "archer").then(function (response){
+        $.get("/api/hero/" + "1").then(function (response){
             console.log(response);
 
       //      $("#empty-heroSpace").replaceWith($("#archerImage"));
 
 
         })
+
+        $.ajax({
+            method: "PUT",
+            url: "/api/hero/" + "1",
+            data: {userChoice: true}
+          }).then(function(){
+            window.location.href = "/enemySelect"
+          });
     });
 
 
     rogueBtnClick.on("click", function(){
-        $.get("/api/hero/" + "rogue").then(function (response){
+        $.get("/api/hero/" + "3").then(function (response){
             console.log(response);
 
        //     $("#empty-heroSpace").replaceWith($("#rogueImage"));
    
 
         })
+
+        $.ajax({
+            method: "PUT",
+            url: "/api/hero/" + "3",
+            data: {userChoice: true}
+          }).then(function(){
+            window.location.href = "/enemySelect"
+          });
     });
 
 

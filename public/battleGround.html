@@ -16,7 +16,7 @@
 <!--==================================================-->
 <div class="container" id="headerBar">
         <div class="row">
-                Header
+                
         </div>
 </div>
 
@@ -28,8 +28,8 @@
 <div class="container" id="battlegroundBack">
 <div class="row">
 <div class="col-sm-3" id="heroImageSpace">
-        Hero Image
-<img src=# id="empty-heroSpace"/>
+     
+<img src=# id="empty-heroSpace" height="300px" width="250px"/>
 </div>
 
 
@@ -41,8 +41,8 @@
 
 
 <div class="col-sm-3" id="enemyImageSpace">
-        Enemy Image
-<img src=# id="empty-enemySpace"/>
+       
+<img src=# id="empty-enemySpace" height="300px" width="250px"/>
 </div>
 </div>
 </div>
@@ -54,8 +54,8 @@
 <!--==================================================-->
 <div class="container" id="text-log-cont">
 <div>
-        <p>You are fighting text log blah blah</p>
-                <h3 id="eventLog"></h3>
+                <h3 id="heroEventLog"></h3>
+                <h3 id="enemyEventLog"></h3>
 </div>
 </div>
 <!--==================================================-->
@@ -67,6 +67,14 @@
 <div class="col-sm-6" id="heroStats-container">
         Hero Stats
                 <ul id="heroStats">
+                                <li id="heroName"></li>
+                                <li id="heroLvl"></li>
+                                <li id="heroHP"></li>
+                                <li id="heroAP"></li>
+                                <li id="heroBP"></li>
+                                <li id="heroDP"></li>
+                                <li id="heroCrit"></li>
+                                <li id="heroCoin"></li>
 ​                </ul>
 </div>
 
@@ -76,6 +84,13 @@
 <div class="col-sm-6" id="enemyStats-container">
         Enemy Stats
                 <ul id="enemyStats">
+                                <li id="monstName"></li>
+                                <li id="monstLvl"></li>
+                                <li id="monstHP"></li>
+                                <li id="monstAP"></li>
+                                <li id="monstBP"></li>
+                                <li id="monstDP"></li>
+                                <li id="monstCrit"></li>
 ​                </ul>
 </div>
 
@@ -91,7 +106,7 @@
 
 <div class="container" id="buttonBar">
         <div class="row">
-                <div>
+        <div id="buttonField">
         <button type="button" id="attack-btn">Attack</button>
         <button type="button" id="dodge-btn">Dodge</button>
         <button type="button" id="block-btn">Block</button>
@@ -129,6 +144,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="./assets/js/battlegroundJS.js"></script>
+<script src="./assets/js/battleground.js"></script>
 </body>
 </html>

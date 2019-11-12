@@ -2,7 +2,6 @@ DROP DATABASE cliCombat_db;
 CREATE DATABASE cliCombat_db;
 USE cliCombat_db;
 
-
 CREATE TABLE heros (
 id int NOT NULL AUTO_INCREMENT,
 name VARCHAR (40) NOT NULL,
@@ -20,6 +19,7 @@ primary key (id)
 );
 
 
+
 CREATE TABLE monsters (
 id int NOT NULL AUTO_INCREMENT,
 name VARCHAR (40) NOT NULL,
@@ -31,6 +31,7 @@ level integer (10) NOT NULL,
 block integer (10) NOT NULL,
 alive BOOLEAN DEFAULT 1,
 enemyChoice BOOLEAN DEFAULT 0,
+characterPic VARCHAR (255) NOT NULL, 
 primary key (id) 
 );
 

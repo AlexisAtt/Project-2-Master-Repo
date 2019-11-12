@@ -1,22 +1,16 @@
-$(document).ready(function() {
-    var playing = false;
+var text = document.getElementById('text');
+var newDom = '';
+var animationDelay = 6;
 
-    $('#musicbutton').click(function() {
-        $(this).toggleClass("down");
+for(let i = 0; i < text.innerText.length; i++)
+{
+    newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+}
 
-        if (playing == false) {
-            document.getElementById('player').play();
-            playing = true;
-            $(this).removeClass('soundIcnPlay');
-            $(this).addClass('soundIcnPause');
+text.innerHTML = newDom;
+var length = text.children.length;
 
-        } else {
-            document.getElementById('player').pause();
-            playing = false;
-            $(this).removeClass('soundIcnPause');
-            $(this).addClass('soundIcnPlay');
-        }
-
-
-    });
-});
+for(let i = 0; i < length; i++)
+{
+    text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+}

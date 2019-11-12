@@ -1,34 +1,29 @@
 * {
     text-decoration: none;
-    font-family: "monserrat";
+    font-family: "Black Ops One", serif;
 }
 
 
 body{
-    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573090338/113769_oqlr0j.jpg);
+    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573578754/bodyBack2_qnvhi8.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     background-color: black;
 }
 
-.jumbotron {
-height: 120px;
-margin-top: 3%;
-text-align: center;
-height: 100px;
-color: goldenrod;
-opacity: 0.95;
-
+.headtxt {
+    margin-top: 2%;
 }
 
-#titlehead h1 {
-
-    font-family: adobe-caslon-pro, serif;
-    font-weight: 600;
+h1 {
+    
+    font-size: 80px;
+    text-shadow: black 2px 2px;
     font-style: normal;
-    font-size: 60px;
-    margin-top: 0;
+    text-align: center;
+    color: whitesmoke;
+    background-color: darkcyan;
 }
    
 
@@ -69,16 +64,17 @@ opacity: 0.95;
 
 .front {
     transform: perspective(600px) rotateY(0deg);
+    
 }
 
 .back {
-    background: #f1f1f1;
+    background: darkcyan;
     transform: perspective(600px) rotateY(180deg);
     opacity: 0.9;
 }
 
 .back-content {
-    color: #2c3e50;
+    color: whitesmoke;
     text-align: center;
     width: 100%;
     font-size-adjust: inherit;
@@ -94,15 +90,15 @@ opacity: 0.95;
     height: 40px;
     justify-content: center;
     align-items: center;
-    color: #2c3e50;
+    color: whitesmoke;
     font-size: 16px;
     transition: 0.4s;
     border-radius: 50%;
 }
 
 .sm a:hover {
-    background: #2c3e50;
-    color: white;
+    background: white;
+    color: #2c3e50;
 }
 
 .card:hover > .front {
@@ -123,3 +119,7 @@ opacity: 0.95;
     opacity: 0.95;
 }
 
+.btndiv a:hover {
+    background: whitesmoke;
+    color: darkcyan;
+}

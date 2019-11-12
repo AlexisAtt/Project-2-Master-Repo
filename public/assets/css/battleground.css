@@ -16,22 +16,22 @@ body {
 }
 
 #heroImageSpace {
-    background-color: gold;
+   
     height: 200px;
-    margin-top: 250px;
+    margin-top: 210px;
     
 }
 
 #enemyImageSpace {
-    background-color: hotpink;
+
     height: 200px;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 #text-log-cont{
     background-color: black;
     color: white;
-    height: 50px;
+    height: 100px;
     text-align: center;
     padding: 2px;
     border-radius: 10%;

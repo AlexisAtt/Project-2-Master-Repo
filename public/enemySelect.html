@@ -1,23 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="/enemycharacter.css">
-        <title>Enemy Select</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/chooseyourenemy.css">
+    <title>Choose Your Character</title>
 </head>
+
 <body>
-    <a class="btn" id="monsterLvlOne-btn">Select</a>
-    <a class="btn" id="monsterLvlTwo-btn">Select</a>
-    <a class="btn" id="monsterLvlThree-btn">Select</a>
-    <a class="btn" id="monsterLvlFour-btn">Select</a>
+    <section>
+
+        <div class="container text-center">
+            <h1 class="heading">Choose Your Enemy</h1>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="assets/images/characters/goblin.jpg" alt="card background" class="card-img">
+                    <img src="assets/images/characters/monster1pic.png" alt="profile image" class="profile-img">
+                    <!-- <h1>Monster 1</h1> -->
+                    <p class="skill-title">Ghastly Goblin</p>
+                    <p class="about">
+                            A goblin is a monstrous creature from European folklore, first attested in stories from the Middle Ages. They are almost always small and grotesque, mischievous or outright malicious, and greedy, especially for gold and jewelry.  They have magical abilities similar to a demon.
+                    </p>
+                    <button onclick="playAudio()"  type="button" class="btn btn-danger"id="monsterLvlOne-btn">Select</button>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/characters/lionimage.jpg" alt="card background" class="card-img">
+                    <img src="assets/images/characters/monster3Pic.png" alt="profile image" class="profile-img">
+                    <!-- <h1>monster 2</h1> -->
+                    <p class="skill-title">Azure Lion</p>
+                    <p class="about">
+                            Mountain lions  are a variety of big cat, usually found in the Alterac Mountains and Hillsbrad Foothills. Across the open plains of Mulgore many animals roam, including mountain lions  (called cougar). Cougars can also be found in Thousand Needles.
+                    </p>
+                    <button onclick="playAudio()"  type="button" class="btn btn-danger"id="monsterLvlTwo-btn">Select</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/characters/ogre_by_manzanedo_dcjxmyu-pre.jpg" alt="card background" class="card-img">
+                    <img src="assets/images/characters/monster2Pic.png" alt="profile image" class="profile-img">
+                    <!-- <h1>monster 3 </h1> -->
+                    <p class="skill-title">Ravenous Ogre</p>
+                    <p class="about">
+                            Ogres are straightforward in combat and often suffer as much punishment as they dish out, relying on their strength and stamina to carry them to victory. There is proof that at least one ogre had all of his teeth knocked out and lived to fight another day.  
+                    </p>
+                    <button onclick="playAudio()"  type="button" class="btn btn-danger"id="monsterLvlThree-btn">Select</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/characters/Ogre_Mage.jpg" alt="card background" class="card-img">
+                    <img src="assets/images/characters/monster4pic.png" alt="profile image" class="profile-img">
+                    <!-- <h1>Monster 4</h1> -->
+                    <p class="skill-title">Sadistic Sorcerer</p>
+                    <p class="about">   
+                        is the living proof of the maxim that power corrupts and that absolute power corrupts absolutely.  The mage who has delved too deeply into Things Man Was Not Meant to Know and mastered The Dark Arts. They achieved power with the sacrifice of their soul.
+                       
+                    </p>
+                    <button onclick="playAudio()"  type="button" class="btn btn-danger"id="monsterLvlFour-btn">Select</button>
+                </div>
+
+                
 
 
+            </div>
+
+        </div>
+    </section>
+    <audio id="myAudio">
+        <source src="assets/audio/sword-collide.mp3" type="audio/mp3">
+    </audio>
+   
+    
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./assets/js/enemySelectJS.js"></script>
+    <script type= "text/javascript" src="assets/js/enemySelectJS.js"></script>
 </body>
+
 </html>

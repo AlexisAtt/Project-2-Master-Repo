@@ -6,35 +6,78 @@ $(document).ready(function() {
     var monsterFourBtnClick = $("#monsterLvlFour-btn");
 
     monsterOneBtnClick.on("click", function(){
-        $.get("/api/monster/" + "monster1").then(function (response){
+        
+        $.ajax({
+            type: 'PUT',
+            url: '/api/monster/1',
+            data: {enemyChoice: 1},
+            success: function () {
+                console.log("Success!")
+                
+            }
+        });
+        $.get("/api/monster/" + "1").then(function (response){
             console.log(response);
+            window.location.href = "/battleGround"
         })
     });
 
     monsterTwoBtnClick.on("click", function(){
-        $.get("/api/monster/" + "monster2").then(function (response){
+        $.ajax({
+            type: 'PUT',
+            url: '/api/monster/2',
+            data: {enemyChoice: 1},
+            success: function () {
+                console.log("Success!")
+                
+                
+            }
+        });
+        $.get("/api/monster/" + "2").then(function (response){
             console.log(response);
+            window.location.href = "/battleGround"
         })
     });
 
 
     monsterThreeBtnClick.on("click", function(){
-        $.get("/api/monster/" + "monster3").then(function (response){
+        $.ajax({
+            type: 'PUT',
+            url: '/api/monster/3',
+            data: {enemyChoice: 1},
+            success: function () {
+                console.log("Success!")
+                
+            }
+        });
+        $.get("/api/monster/" + "3").then(function (response){
             console.log(response);
+            window.location.href = "/battleGround"
         })
     });
 
 
     monsterFourBtnClick.on("click", function(){
-        $.get("/api/monster/" + "monster4").then(function (response){
+        $.ajax({
+            type: 'PUT',
+            url: '/api/monster/4',
+            data: {enemyChoice: 1},
+            success: function () {
+                console.log("Success!")
+                
+            }
+        });
+        $.get("/api/monster/" + "4").then(function (response){
             console.log(response);
+            window.location.href = "/battleGround"
         })
     });
 
 
-
-
-
-
-
 });
+
+var buttonAudio = document.getElementById("myAudio");
+
+function playAudio() {
+    buttonAudio.play();
+}

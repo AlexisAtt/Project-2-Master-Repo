@@ -37,6 +37,11 @@ module.exports = function(app) {
             res.sendFile(path.join(__dirname, "../public/winsPage.html"));
         });
 
+    // Final Wins Page loads winsPage.html
+    app.get("/FinalWinsPage", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/finalwin.html"));
+    });
+
     // gameOver loads gameOver.html
         app.get("/gameOver", function(req, res) {
             res.sendFile(path.join(__dirname, "../public/gameOver.html"));

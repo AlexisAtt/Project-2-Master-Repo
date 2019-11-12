@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       block: DataTypes.INTEGER,
       alive: DataTypes.BOOLEAN,
       enemyChoice: DataTypes.BOOLEAN,
+      characterPic: DataTypes.STRING
     },
     {timestamps: false},
     {allowNull:false}

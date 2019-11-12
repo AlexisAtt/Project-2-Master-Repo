@@ -5,31 +5,32 @@
 
 
 body{
-    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573090338/113769_oqlr0j.jpg);
+    background: url(https://res.cloudinary.com/mrv5122/image/upload/v1573578754/bodyBack2_qnvhi8.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     background-color: black;
 }
 
-.jumbotron {
-    height: 120px;
-    margin-top: 2%;
-    text-align: center;
-    height: 100px;
-    color: goldenrod;
-    opacity: 0.95;
     
-    }
-    
-    #titlehead h1 {
-    
-        font-family: adobe-caslon-pro, serif;
-        font-weight: 600;
+    h1 {
+        font-family: "Black Ops One", serif;
         font-style: normal;
-        font-size: 60px;
-        margin-top: 0;
+        font-size: 80px;
+        color: whitesmoke;
+        text-shadow: black 2px 2px;
+        text-align: center;
+        background-color: darkcyan;
     }
+
+.headtxt {
+    margin-top: 2%;
+}
+
+/* shopkeep div & item div */
+.middle, .container-shopkeep {
+    margin-top: 30px;
+}
 
    
 
@@ -73,13 +74,13 @@ body{
 }
 
 .back {
-    background: #f1f1f1;
+    background: darkcyan;
     transform: perspective(600px) rotateY(180deg);
     opacity: 0.9;
 }
 
 .back-content {
-    color: #2c3e50;
+    color: whitesmoke;
     text-align: center;
     width: 100%;
     font-family: adobe-caslon-pro, serif;
@@ -100,15 +101,15 @@ body{
     height: 40px;
     justify-content: center;
     align-items: center;
-    color: #2c3e50;
+    color: whitesmoke;
     font-size: 16px;
     transition: 0.4s;
     border-radius: 50%;
 }
 
 .sm a:hover {
-    background: #2c3e50;
-    color: white;
+    background: whitesmoke;
+    color: darkcyan;
 }
 
 .card:hover > .front {
@@ -122,10 +123,10 @@ body{
 /* BUTTON STYLING */
 .btndiv {
     position: absolute;
-    top: 80%;
-    width: 10%;
+    bottom: 10%;
+    width: 15%;
     margin-left: 45%;
-    margin-right: 45%;
+    margin-right: 42%;
     opacity: 0.95;
 }
 
@@ -135,7 +136,12 @@ body{
 }
 
 .container-shopkeep {
-    margin-left: 40px;
+    margin-left: 30px;
     float: left;
 
+}
+
+.btndiv a:hover {
+    background: whitesmoke;
+    color: darkcyan;
 }

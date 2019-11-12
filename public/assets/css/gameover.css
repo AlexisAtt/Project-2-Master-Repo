@@ -1,0 +1,38 @@
+body{
+    /* background-image: url(/gameover/img/background.jpg); */
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.section{
+    text-align: center;
+    padding-top: 15%;
+    font-size: 100px;
+    background-color:
+    
+}
+
+.gameover p {
+    margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 160px;
+        font-family: 'Black Ops One';
+        line-height: 120px;
+        text-align: center;
+        text-shadow: .5px .5px grey;
+        color: rgb(63, 3, 3);
+        -webkit-animation: fadein 5s;
+     
+}
+@keyframes fadein{
+    from {opacity: 0;}
+    to {opacity: 6;}
+}
+
+.audio{
+    display:none;
+}
+
+

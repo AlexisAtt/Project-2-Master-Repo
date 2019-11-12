@@ -1,0 +1,67 @@
+body {
+    background-image: url("../images/bodyBack2.png");
+}
+
+#headerBar {
+    
+    height: 50px;
+}
+
+#battlegroundBack {
+    background-image: url("../images/backgrounds/battleGroundPic.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 2%;
+}
+
+#heroImageSpace {
+    background-color: gold;
+    height: 200px;
+    margin-top: 250px;
+    
+}
+
+#enemyImageSpace {
+    background-color: hotpink;
+    height: 200px;
+    margin-top: 250px;
+}
+
+#text-log-cont{
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10%;
+  
+}
+
+
+#gameStats {
+   
+    height: 250px;
+}
+
+#heroStats-container {
+    background-image: url("../images/statBox.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+   
+}
+
+#enemyStats-container {
+    background-image: url("../images/statBox.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+ 
+}
+
+#buttonBar {
+    text-align: center;
+    background-color: black;
+    border-radius: 10%;
+}

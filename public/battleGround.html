@@ -6,10 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/battleground.css">
     <title>Battle Ground</title>
 </head>
 <body>
 
+<!--==================================================-->
+<!--==================Header==========================-->
+<!--==================================================-->
+<div class="container" id="headerBar">
+        <div class="row">
+                Header
+        </div>
+</div>
+
+<!--==================================================-->
+<!--====================Game==========================-->
+<!--==================================================-->
+
+
+<div class="container" id="battlegroundBack">
+<div class="row">
+<div class="col-sm-3" id="heroImageSpace">
+        Hero Image
+<img src=# id="empty-heroSpace"/>
+</div>
+
+
+
+<div class="col-sm-6" id="emptyMiddleSpace">
+                
+     
+</div>
+
+
+<div class="col-sm-3" id="enemyImageSpace">
+        Enemy Image
+<img src=# id="empty-enemySpace"/>
+</div>
+</div>
+</div>
+
+
+
+<!--==================================================-->
+<!--====================Text Log======================-->
+<!--==================================================-->
+<div class="container" id="text-log-cont">
+<div>
+        <p>You are fighting text log blah blah</p>
+                <h3 id="eventLog"></h3>
+</div>
+</div>
+<!--==================================================-->
+<!--====================Display Stats=================-->
+<!--==================================================-->
+<div class="container" id="gameStats">
+
+
+<div class="col-sm-6" id="heroStats-container">
+        Hero Stats
+                <ul id="heroStats">
+​                </ul>
+</div>
+
+
+
+
+<div class="col-sm-6" id="enemyStats-container">
+        Enemy Stats
+                <ul id="enemyStats">
+​                </ul>
+</div>
+
+
+
+
+</div>
+
+
+<!--==================================================-->
+<!--==================Button Bar======================-->
+<!--==================================================-->
+
+<div class="container" id="buttonBar">
+        <div class="row">
+                <div>
+        <button type="button" id="attack-btn">Attack</button>
+        <button type="button" id="dodge-btn">Dodge</button>
+        <button type="button" id="block-btn">Block</button>
+                </div>
+                </div>
+</div>
+
+<!--
 <div class="col-sm" id="">
                 <img src=# id="empty-heroSpace"/>
 </div>
@@ -34,6 +124,8 @@
                 <button type="button" id="dodge-btn">Dodge</button>
                 <button type="button" id="block-btn">Block</button>
         </div>
+
+        -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

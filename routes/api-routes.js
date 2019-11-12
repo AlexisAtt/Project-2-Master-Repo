@@ -69,6 +69,61 @@ module.exports = function(app) {
         });
       });
 
+      app.put("/api/heroHealed/:userChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          id: req.params.id,
+          health: req.body.health,
+          coin: req.body.coin
+        }, {
+          where: {
+            userChoice: req.params.userChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
+      app.put("/api/heroHoned/:userChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          id: req.params.id,
+          attack: req.body.attack,
+          coin: req.body.coin
+        }, {
+          where: {
+            userChoice: req.params.userChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
+      app.put("/api/heroArmored/:userChoice", function(req, res) {
+        // Update takes in an object describing the properties we want to update, and
+        // we use where to describe which objects we want to update
+        console.log(req.params.id)
+        console.log(req.body.userChoice)
+        db.hero.update({
+          id: req.params.id,
+          block: req.body.block,
+          dodge: req.body.dodge,
+          coin: req.body.coin
+        }, {
+          where: {
+            userChoice: req.params.userChoice
+          }
+        }).then(function(data) {
+          res.json(data);
+        });
+      });
+
       app.put("/api/heroLeveledUp/:userChoice", function(req, res) {
         // Update takes in an object describing the properties we want to update, and
         // we use where to describe which objects we want to update
@@ -194,7 +249,59 @@ module.exports = function(app) {
         });
       });
 
-    
+      app.delete("/api/hero/:id", function (req, res){
+        console.log(req.params.id);
+        db.hero.destroy({ where: {id: req.params.id }}).then(function (heroData){
+            console.log(heroData);
+            res.json(heroData);
+        })
+        
+      });
+
+      app.delete("/api/monster/:id", function (req, res) {
+        console.log(req.params.id);
+        db.monster.destroy({ where: {id: req.params.id }}).then(function (monsterData){
+            console.log(monsterData);
+            res.json(monsterData);
+        });
+      });
+
+      app.post("/api/heros", function (req, res) {
+        db.hero.create({
+          id: req.body.id,
+          name: req.body.name,
+          health: req.body.health,
+          attack: req.body.attack,
+          critMod: req.body.critMod,
+          level: req.body.level,
+          dodge: req.body.dodge,
+          block: req.body.block,
+          coin: req.body.coin,
+          alive: req.body.alive,
+          userChoice: req.body.userChoice,
+          characterPic: req.body.characterPic
+        }).then(function(herosData){
+            res.json(herosData);
+        });
+      });
+
+      app.post("/api/monsters", function (req, res) {
+        db.monster.create({
+          id: req.body.id,
+          name: req.body.name,
+          health: req.body.health,
+          attack: req.body.attack,
+          critMod: req.body.critMod,
+          level: req.body.level,
+          dodge: req.body.dodge,
+          block: req.body.block,
+          alive: req.body.alive,
+          enemyChoice: req.body.enemyChoice,
+          characterPic: req.body.characterPic
+        }).then(function(monsterData){
+            res.json(monsterData);
+        });
+      });
 }
 
 

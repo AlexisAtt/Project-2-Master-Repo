@@ -167,7 +167,7 @@ $(document).ready(function(){
                 }
             });
         } else { 
-            $("#heroEventLog").text(attacker.attack + "Missed!");
+            $("#heroEventLog").text(attacker.name + " Missed!");
         };
     } else {
         if (hitChance >= 10) {
@@ -197,7 +197,7 @@ $(document).ready(function(){
                 }
             });
         } else { 
-            $("#enemyEventLog").text(attacker.attack + "Missed!");
+            $("#enemyEventLog").text(attacker.name + " Missed!");
         };
     };
     };

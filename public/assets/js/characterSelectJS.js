@@ -13,7 +13,7 @@ $(document).ready(function() {
 
         $.get("/api/hero/" + "4").then(function (response){
             console.log(response);
-            alert("You are the Mage!")
+           
    
             
         })
@@ -32,7 +32,7 @@ $(document).ready(function() {
     knightBtnClick.on("click", function(){
         $.get("/api/hero/" + "2").then(function (response){
             console.log(response);
-            alert("You are the Knight!")
+            
 
         })
 
@@ -49,10 +49,7 @@ $(document).ready(function() {
     archerBtnClick.on("click", function(){
         $.get("/api/hero/" + "1").then(function (response){
             console.log(response);
-            alert("You are the Archer!")
-
-      //      $("#empty-heroSpace").replaceWith($("#archerImage"));
-
+            
 
         })
 
@@ -69,9 +66,7 @@ $(document).ready(function() {
     rogueBtnClick.on("click", function(){
         $.get("/api/hero/" + "3").then(function (response){
             console.log(response);
-            alert("You are the Rogue!")
 
-       //     $("#empty-heroSpace").replaceWith($("#rogueImage"));
    
 
         })

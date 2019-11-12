@@ -1,0 +1,48 @@
+body {
+    background-image: url("../images/bodyBack2.png");
+}
+
+#headerBar {
+
+    height: 50px;
+
+}
+
+#itemShopBack {
+    background-image: url("../images/backgrounds/battleGroundPic.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 2%;
+
+}
+
+#gameStats {
+    height: 250px;
+
+}
+
+#heroStats-container {
+    background-image: url("../images/statBox.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+
+}
+
+#heroImageSpace {
+   
+    height: 200px;
+    margin-top: 210px;
+    
+}
+#shopKeepImageSpace {
+    height: 200px;
+    margin-top: 210px;
+}
+
+#buttonBar {
+    text-align: center;
+    background-color: black;
+    border-radius: 10%;
+}

@@ -237,7 +237,8 @@ module.exports = function(app) {
         console.log(req.body.enemyChoice)
         db.monster.update({
           id: req.params.id,
-          enemyChoice: req.body.enemyChoice
+          enemyChoice: req.body.enemyChoice,
+          health: req.body.health
         }, {
           where: {
             enemyChoice: req.params.enemyChoice

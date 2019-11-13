@@ -1,16 +1,30 @@
 $(document).ready(function(){
     var hero = {};
     var monster = {};
+    var heroOriginHP = 0;
+    var monsterOriginHP = 0;
     var attackBtnClick = $("#attack-btn");
     var dodgeBtnClick = $("#dodge-btn");
     var blockBtnClick = $("#block-btn");
+
+    var saveOrigHealth = function(){
+        $.get("/api/heroChoice/1").then(function (response){
+            heroOriginHP = response.health;
+        });
+        $.get("/api/monsterChoice/1").then(function (response){
+            monsterOriginHP = response.health;
+        });
+
+    }
+
+    saveOrigHealth();
     
     var levelUp = function(){
         $.ajax({
             type: 'PUT',
             url: '/api/heroLeveledUp/1',
             data: {
-                health: (hero.health + 10),
+                health: (heroOriginHP + 10),
                 attack: (hero.attack + 10),
                 block: (hero.block + 10),
                 dodge: (hero.dodge + 10),
@@ -86,7 +100,10 @@ $(document).ready(function(){
                                 click: function () { window.location.href = "/winsPage"; $.ajax({
                                     type: 'PUT',
                                     url: '/api/monsterUnselect/1',
-                                    data: {enemyChoice: false},
+                                    data: {
+                                        enemyChoice: false,
+                                        health: monsterOriginHP
+                                    },
                                     success: function () {
                                         console.log("enemy unselected")
                     
@@ -114,7 +131,10 @@ $(document).ready(function(){
                                 click: function () { window.location.href = "/winsPage"; $.ajax({
                                     type: 'PUT',
                                     url: '/api/monsterUnselect/1',
-                                    data: {enemyChoice: false},
+                                    data: {
+                                        enemyChoice: false,
+                                        health: monsterOriginHP
+                                    },
                                     success: function () {
                                         console.log("enemy unselected")
                     

@@ -315,7 +315,7 @@ $(document).ready(function(){
             block(hero, monster);
         } else {
             attack(hero, monster);
-            if (monster.alive){
+            if (monster.health>0){
             attack(monster, hero);
             };
         }

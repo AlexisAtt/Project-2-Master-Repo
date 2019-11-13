@@ -247,7 +247,7 @@ module.exports = function(app) {
         });
       });
       
-      app.delete("/api/hero/:id", function (req, res){
+      app.delete("/api/heroDelete/:id", function (req, res){
         console.log(req.params.id);
         db.hero.destroy({ where: {id: req.params.id }}).then(function (heroData){
             console.log(heroData);
@@ -256,7 +256,7 @@ module.exports = function(app) {
         
       });
 
-      app.delete("/api/monster/:id", function (req, res) {
+      app.delete("/api/monsterDelete/:id", function (req, res) {
         console.log(req.params.id);
         db.monster.destroy({ where: {id: req.params.id }}).then(function (monsterData){
             console.log(monsterData);
@@ -264,7 +264,7 @@ module.exports = function(app) {
         });
       });
 
-      app.post("/api/heros", function (req, res) {
+      app.post("/api/herosCreate", function (req, res) {
         db.hero.create({
           id: req.body.id,
           name: req.body.name,
@@ -283,7 +283,7 @@ module.exports = function(app) {
         });
       });
 
-      app.post("/api/monsters", function (req, res) {
+      app.post("/api/monstersCreate", function (req, res) {
         db.monster.create({
           id: req.body.id,
           name: req.body.name,

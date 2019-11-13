@@ -4,9 +4,9 @@ body{
     background-size: auto;
     background-repeat: no-repeat;
 }
-html{
+/*html{
     overflow:hidden;
-}
+}*/
 *{
     margin: 0;
     padding: 0;
@@ -37,13 +37,13 @@ h1{
     color: black;
     position: relative;
 } 
-section{
+/*section{
     /* padding: 0;
     background-image: url(/img/backgroundcharacterselection.png);
     background-size: auto;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
     
-}
+}*/
 .card-wrapper{
     display:flex;
     align-items: center;

@@ -1,48 +1,54 @@
 body {
     background-image: url("../images/bodyBack2.png");
-}
-
-#headerBar {
-
+ }
+ #headerBar {
     height: 50px;
-
-}
-
-#itemShopBack {
-    background-image: url("../images/backgrounds/battleGroundPic.png");
-    background-size: 100%;
+ }
+ h5 {
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: 17px;
+ }
+ #itemShopBack {
+    background-image: url("../images/backgrounds/itemShopBack.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 500px;
     border-radius: 2%;
-
-}
-
-#gameStats {
+ }
+ #gameStats {
+    font-family: fantasy;
     height: 250px;
-
-}
-
-#heroStats-container {
+    font-weight: bold;
+ }
+ #heroStats-container {
     background-image: url("../images/statBox.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 250px;
-
-}
-
-#heroImageSpace {
-   
+ }
+ #heroImageSpace {
     height: 200px;
     margin-top: 210px;
-    
-}
-#shopKeepImageSpace {
-    height: 200px;
-    margin-top: 210px;
-}
-
-#buttonBar {
+ }
+ #shopKeepImageSpace {
+    height: 100px;
+    margin-top: 190px;
+ }
+ #healthItem {
+    margin-top: 250px;
+ }
+ #attackItem {
+    margin-top: 200px;
+ }
+ #armorItem {
+    margin-top: 90px;
+ }
+ #levelItem {
+    margin-top: 120px;
+ }
+ #buttonBar {
     text-align: center;
     background-color: black;
     border-radius: 10%;
-}
+ }

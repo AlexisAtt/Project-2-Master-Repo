@@ -21,41 +21,53 @@
 <!--==================================================-->
 <!--====================Game==========================-->
 <!--==================================================-->
-
-
+​
+​
 <div class="container" id="itemShopBack">
 <div class="row">
-<div class="col-sm-3" id="heroImageSpace">
+<div class="col-sm-2" id="heroImageSpace">
      
 <img src=# id="empty-heroSpace" height="300px" width="250px"/>
 </div>
-
-
-
-<div class="col-sm-6" id="emptyMiddleSpace">
-                
-     
+​
+<!--===================================================-->
+<!--=========================Items=====================-->
+<!--===================================================-->
+​
+<div class="col-sm-2">  
+        <input type="image" src="assets/images/characters/healthPotion.png" id="healthItem" height="100px" width="100px">         
 </div>
-
-
-<div class="col-sm-3" id="shopKeepImageSpace">
-       
+​
+<div class="col-sm-2">  
+        <input type="image" src="assets/images/characters/attackImage.png" id="attackItem" height="200px" width="200px">              
+</div>
+​
+<div class="col-sm-2" id="armorItem">
+        <input type="image" src="assets/images/characters/armorImage.png" id="armorItem" height="200px" width="200px">                   
+</div>
+​
+<div class="col-sm-2" id="levelItem">
+        <input type="image" src="assets/images/characters/bookItemPic.png" id="levelItem" height="130px" width="130px">  
+​
+ </div>
+    
+<div class="col-sm-2" id="shopKeepImageSpace">
 <img src="assets/images/characters/shopkeeperPic.png" height="150px" width="150px"/>
 </div>
 </div>
 </div>
-
-
-
-
+​
+​
+​
+​
 <!--==================================================-->
 <!--====================Display Stats=================-->
 <!--==================================================-->
 <div class="container" id="gameStats">
-
-
+​
+​
 <div class="col-sm-6" id="heroStats-container">
-        Hero Stats
+        <h5>Hero Stats: </h5>
                 <ul id="heroStats">
                                 <li id="heroName"></li>
                                 <li id="heroLvl"></li>
@@ -67,23 +79,26 @@
                                 <li id="heroCoin"></li>
 ​                </ul>
 </div>
-
-
-
-
-
+​
+​
+​
+​
+​
 </div>
-
-
+​
+​
 <!--==================================================-->
 <!--==================Button Bar======================-->
 <!--==================================================-->
-
+​
   <!-- navigation button div -->
   <div class="btndiv" id="buttonBar">
         <a href="/enemySelect" class="btn btn-secondary btn-lg" id="return">Fight Next Enemy</a>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./assets/js/itemShop.js"></script>
+​
 </body>
-
+​
 </html>
